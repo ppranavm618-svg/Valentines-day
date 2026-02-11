@@ -1,0 +1,312 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Herr ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #121212;
+            --heart-red: #ff2e63;
+            --gold: #d4af37;
+            --soft-pink: #ffccd5;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* 1. Irritating Loader */
+        #loader {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            z-index: 2000;
+            position: fixed;
+            width: 100%;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255,255,255,0.1);
+            border-left: 4px solid var(--heart-red);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* 2. Main Content */
+        #main-content { display: none; padding-bottom: 100px; }
+
+        .hero { height: 60vh; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); }
+        
+        h1 { font-family: 'Dancing Script', cursive; font-size: 4rem; color: var(--heart-red); margin-bottom: 0; }
+        
+        .timeline { max-width: 500px; margin: 50px auto; text-align: left; padding: 20px; border-left: 3px solid var(--gold); background: rgba(255,255,255,0.05); border-radius: 0 15px 15px 0; }
+        .milestone { margin-bottom: 30px; }
+        .date { color: var(--gold); font-weight: bold; font-size: 1.1rem; }
+
+        /* Photo Section */
+        .photo-container { padding: 20px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        .photo-container img { width: 250px; height: 350px; object-fit: cover; border-radius: 15px; border: 3px solid var(--gold); transition: transform 0.3s; }
+        .photo-container img:hover { transform: scale(1.05); }
+
+        /* Paragraph Section */
+        .letter-box { max-width: 700px; margin: 50px auto; padding: 40px; background: rgba(255, 46, 99, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); line-height: 1.8; text-align: justify; font-size: 1.05rem; }
+        .letter-box h2 { font-family: 'Dancing Script'; color: var(--gold); text-align: center; font-size: 2.5rem; }
+
+        /* 3. The Interactive Prank Section */
+        .question-section { margin: 100px 0; position: relative; height: 300px; }
+        .btn-container { position: relative; height: 100px; margin-top: 30px; }
+        
+        button { padding: 15px 40px; font-size: 1.2rem; border-radius: 50px; border: none; cursor: pointer; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        #yesBtn { background: var(--heart-red); color: white; transition: 0.3s; }
+        #noBtn { background: #444; color: #ccc; position: absolute; left: 55%; }
+
+        #final-celebration { display: none; padding: 50px; }
+        .heart-rain { position: fixed; top: -20px; color: var(--heart-red); pointer-events: none; z-index: 1000; }
+
+        /* Spotify Player */
+        .music-box { margin: 40px auto; max-width: 400px; border-radius: 12px; overflow: hidden; }
+    </style>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+        <h2 id="load-msg" style="margin-top: 20px; color: var(--gold);">Finding Herr...</h2>
+        <p id="percent">0%</p>
+    </div>
+
+    <div id="main-content">
+        <div class="hero">
+            <h1>Heyy Janulii... ❤️</h1>
+            <p>I hope the wait was worth it.Ready for your surprise? Keep scrolling...</p>
+        </div>
+
+        <div class="music-box">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/track/0dLbrlAVPPjpPqnYfmJsWk?si=22520a85b3bd47f4" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+
+        <div class="timeline">
+            <div class="milestone">
+                <span class="date">25 March 2023</span>
+                <p>The day it all started with a simple friend request. One text that changed my whole world.</p>
+            </div>
+            <div class="milestone">
+                <span class="date">25 April 2023</span>
+                <p>The day we met in person for the first time. We were so shy, but I knew there was something special about you.</p>
+            </div>
+        </div>
+
+        <div class="photo-container">
+            <img src="![photo1 jpg](https://github.com/user-attachments/assets/207ba17d-7f04-4488-9180-f2c0ac9516b6)" alt="Our Memory">
+            <img src="![photo2 jpg](https://github.com/user-attachments/assets/155522e5-8ac2-4ca5-bd74-9ba163394aea)" alt="Our Memory">
+            <img src="![photo3 jpg](https://github.com/user-attachments/assets/e7e70b01-ad14-4b88-8494-9fa14e6fc7e3)" alt="Our Memory">
+            <img src="![photo4 jpg](https://github.com/user-attachments/assets/1cf0d09d-5bdd-415e-b4f0-9db6c7c60d8b)" alt="Our Memory">
+
+        </div>
+<style>
+    .envelope-wrapper {
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .envelope {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background: #b91d1d; /* Deep Red */
+        cursor: pointer;
+        transition: 0.5s;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* The Flap */
+    .envelope::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        border-top: 110px solid #dc2626; /* Brighter Red */
+        border-left: 150px solid red;
+        border-right: 150px solid white;
+        transform-origin: bottom;
+        transition: all 0.5s 0.1s;
+    }
+
+    /* The Inside Letter */
+    .letter-content {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        width: 280px;
+        height: 180px;
+        background: white;
+        padding: 20px;
+        color: #333;
+        font-size: 0.7rem;
+        transition: all 0.5s;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 5px;
+        text-align: left;
+    }
+
+    /* Animation when opened */
+    .envelope.open::before {
+        transform: rotateX(180deg);
+        z-index: 0;
+    }
+
+    .envelope.open .letter-content {
+        bottom: 100px;
+        height: auto;
+        width: 80vw;
+        max-width: 600px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+        font-size: 1rem;
+        padding: 40px;
+        box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    }
+
+    .heart-seal {
+        position: absolute;
+        top: 90px;
+        left: 135px;
+        z-index: 3;
+        font-size: 30px;
+        color: var(--gold);
+        transition: 0.5s;
+    }
+
+    .envelope.open .heart-seal {
+        opacity: 0;
+    }
+</style>
+
+<div class="envelope-wrapper">
+    <div class="envelope" id="myEnvelope" onclick="openEnvelope()">
+        <div class="heart-seal">❤️</div>
+        <div class="letter-content" id="letterText">
+            <h2 style="font-family: 'Dancing Script'; color: var(--heart-red); text-align: center;">Hey Janulii, 💖</h2>
+            <p>I was thinking about how everything started between us—how we were just two strangers, unaware that one text would lead to something so special. When I first messaged you, I didn’t know how deeply you’d become a part of my world. But now, I can’t imagine life without you in it. Every moment we’ve shared feels right, even the little imperfect ones. It’s like with you, everything just falls into place.</p>
+            <p>Remember when we first met? We were both so shy, not sure what to say or how to act. But somehow, we figured it out and that’s when I knew there was something different about you. As the days turned into weeks, and then months, we went from strangers to friends, to best friends, and now, here we are something more.</p>
+            <p>I’ve never felt this way about anyone before. We’ve been through so much together, seen each other’s flaws and imperfections, yet somehow, we’ve only gotten closer. That’s the kind of love I want the kind that sticks around no matter what.</p>
+            <p>And today, on Valentine’s Day, I can’t help but think how lucky I am to have you in my life. I never imagined that our friendship would evolve into something this beautiful, but now, I couldn’t picture a future without you. You’ve shown me what real love and comfort are, and with you, I don’t have to pretend to be anyone other than myself.</p>
+            <p>I feel like the luckiest person in the world, knowing you’re mine. You’ve become my person, my safe space, and my home. And every day I spend with you is a reminder of how deeply I care for you.</p>
+            <p>So, thank you for being everything I never knew I needed—and more. I can’t wait to see what the future holds for us, and I promise to always be here for you, through the highs, the lows, and everything in between.
+
+You make my life brighter in ways I never thought possible. Happy Valentine’s Day, baby. Here's to many more moments, memories, and Valentine's Days together. ❤️</p>
+            <p style="text-align: right; font-family: 'Dancing Script'; font-size: 2rem; color: var(--gold);">Forever yours, <br> NILU DARLING 💕</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openEnvelope() {
+        const env = document.getElementById('myEnvelope');
+        env.classList.toggle('open');
+        const fullText = document.getElementById('full-text');
+        if(env.classList.contains('open')) {
+            setTimeout(() => {
+                fullText.style.display = 'block';
+            }, 500);
+        } else {
+            fullText.style.display = 'none';
+        }
+    }
+</script>
+
+               <div class="question-section" id="q-section">
+            <h2 style="font-size: 2.5rem; font-family: 'Dancing Script';">Will you be my Valentine?</h2>
+            <div class="btn-container">
+                <button id="yesBtn" onclick="celebrate()">YES! 😍</button>
+                <button id="noBtn" onmouseover="moveNo()">No 😢</button>
+            </div>
+        </div>
+
+        <div id="final-celebration">
+            <h1 style="font-size: 4rem;">I KNEW YOU WOULD SAY YES😘</h1>
+            <p style="font-size: 1.5rem; color: var(--gold);">You're officially stuck with me forever now!</p>
+            <p>Happy Valentine's Day, Baby! ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        // Loader Logic
+        let p = 0;
+        const msg = document.getElementById('load-msg');
+        const interval = setInterval(() => {
+            p += Math.floor(Math.random() * 5) + 1;
+            if (p > 100) p = 100;
+            document.getElementById('percent').innerText = p + "%";
+            
+            if(p > 30) msg.innerText = "Scanning memories...";
+            if(p > 60) msg.innerText = "Preparing the love...";
+            if(p > 90) msg.innerText = "Almost there, Janulii...";
+
+            if (p >= 100) {
+                clearInterval(interval);
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('main-content').style.display = 'block';
+                }, 1000);
+            }
+        }, 200);
+
+        // Moving "No" Button
+        function moveNo() {
+            const noBtn = document.getElementById('noBtn');
+            const container = document.getElementById('q-section');
+            const maxX = container.clientWidth - noBtn.clientWidth;
+            const maxY = container.clientHeight - noBtn.clientHeight;
+            
+            const newX = Math.random() * maxX;
+            const newY = Math.random() * maxY;
+            
+            noBtn.style.left = newX + 'px';
+            noBtn.style.top = newY + 'px';
+        }
+
+        // Yes Button Logic
+        function celebrate() {
+            document.getElementById('q-section').style.display = 'none';
+            document.getElementById('final-celebration').style.display = 'block';
+            
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.classList.add('heart-rain');
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+                document.body.appendChild(heart);
+                
+                heart.animate([
+                    { transform: 'translateY(0vh)' },
+                    { transform: 'translateY(100vh)' }
+                ], { duration: 3000 });
+
+                setTimeout(() => heart.remove(), 3000);
+            }, 100);
+        }
+    </script>
+</body>
+</html>
